@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 using namespace std;
 
-void assn1(unsigned char c)
+void assn1(const unsigned char c)
 {
 	cout << static_cast<int>(c) << "의 바이너리: ";
 
@@ -63,7 +63,7 @@ void assn3()
 		data |= tempByte << (byteIdx - 1) * 8;
 
 		for (int i = 0; i < 4; ++i) {
-			unsigned char c = (data >> (8 * i)) & 0xFF;
+			const unsigned char c = (data >> (8 * i)) & 0xFF;
 			cout << i + 1 << "번째 Byte: " << (int)c << endl;
 		}
 
